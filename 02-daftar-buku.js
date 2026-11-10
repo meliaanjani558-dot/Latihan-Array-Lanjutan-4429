@@ -1,26 +1,14 @@
 const daftarBuku = [
     "HTML Dasar",
-    " CSS Dasar",
+    "CSS Dasar",
     "JavaScript Dasar",
-    "PHP Dasar",
-]
+    "PHP Dasar"
+];
 
-console.log("Daftar buku awal:", daftarBuku);
-const indexCSS = daftarBuku.indexOf("CSS Dasar");
-console.log("Indeks CSS Dasar:", indexCSS);
-if (indexCSS !== -1) {
-    daftarBuku.splice(indexCSS, 1, "CSS Modern");
-}
+console.log("Awal:", daftarBuku);
 
-const indexJS = daftarBuku.indexOf("JavaScript Dasar");
-if (indexJS !== -1) {
-    daftarBuku.splice(indexJS + 1, 0, "Git Dasar");
-}
+daftarBuku.splice(daftarBuku.indexOf("CSS Dasar"), 1, "CSS Modern");
+daftarBuku.splice(daftarBuku.indexOf("JavaScript Dasar") + 1, 0, "Git Dasar");
+daftarBuku.splice(daftarBuku.indexOf("PHP Dasar"), 1);
 
-const indexPHP = daftarBuku.indexOf("PHP Dasar");
-if (indexPHP !== -1) {
-    daftarBuku.splice(indexPHP, 1);
-}
-
-console.log("Daftar buku setelah perubahan:", daftarBuku);
-console.log("Jumlah buku tersisa:", daftarBuku.length);
+console.log("Terbaru:", daftarBuku, " Total:", daftarBuku.length);
